@@ -1,0 +1,19 @@
+.apropos{
+    .apropos-collapse{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px 80px;
+    }
+}
+
+//sur mobile max-width: 548px
+@media all and (max-width: 548px){
+    .apropos{
+        .apropos-collapse{
+            
+            padding: 30px 0px;
+           
+        }
+    }
+}
