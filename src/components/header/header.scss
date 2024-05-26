@@ -1,0 +1,71 @@
+
+@mixin text{
+    font:{
+        family: 'Montserrat';
+        size: 1.2rem;
+        weight: 5 * 100;
+    }
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 8%;
+    .logo{
+        img{
+            width: 130px;
+            height: 35px;
+        }
+    }
+
+    .navbar{
+        ul{
+            display: flex;
+            
+            li{
+                list-style: none;
+                margin-left: 50px;
+                color: #000;
+                @include text;
+            }
+            li.active{
+                text-decoration: underline;
+                
+            }
+        }
+    }
+}
+
+//sur mobile max-width: 480px
+@media all and (max-width: 480px) {
+    .header{
+        padding: 20px;
+        .navbar{
+            ul{
+                li{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+//sur mobile max-width: 382px
+@media all and (max-width: 382px) {
+    .header{
+        .logo{
+            img{
+                width: 90px;
+                height: 25px;
+            }
+        }
+        .navbar{
+            ul{
+                li{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
