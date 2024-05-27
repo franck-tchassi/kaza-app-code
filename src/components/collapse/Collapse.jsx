@@ -1,10 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
+import '@collapse/collapse.scss'
+import { GoChevronUp, GoChevronDown } from "react-icons/go";
 
-const Collapse = () => {
+const Collapse = (props) => {
+  const [isOpen, setOpen]= useState(false)
+  const handleClick = ()=>{
+    setOpen(!isOpen)
+  }
+
   return (
-    <div>
+    <div className='collapse-container'>
+      <div className='collapse'>
+          <h2>
+            {props.title}
+          </h2>
+          { isOpen ? 
+              <div className='icon' onClick={handleClick}>
+                <GoChevronDown />
+              </div>
+              
+              :
+              <div className='icon' onClick={handleClick}>
+                <GoChevronUp />
+              </div>
+          }
+      </div>
+      {isOpen? 
+          <div className='collapse-description'>
+            <p>{props.description}</p>
+          </div>
+          :
+          ""
+      }
       
     </div>
+    
   )
 }
 
