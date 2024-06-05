@@ -4,10 +4,31 @@ import logementsData from '../../data/logements.json';
 import Collapse from '@collapse/Collapse';
 import Rating from '@rating/Rating';
 import '@logement/logement.scss';
+import Erreur from '@erreur/Erreur';
+import Slideshow from '../../components/slideshow/Slideshow';
 
 function Logement() {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const preSlide = ()=>{
+    const isFistSlide = currentIndex === 0; 
+    const newSlide = isFistSlide? logement.pictures.length - 1 : currentIndex - 1 
+    setCurrentIndex(newSlide)
+  }
+  const nexSlide = ()=>{
+    const isLastSlide = currentIndex === logement.pictures.length - 1  ; 
+    const newSlide = isLastSlide? 0 : currentIndex + 1 
+    setCurrentIndex(newSlide)
+  }
+  useEffect(() => {
+    const intervalId = setInterval(nexSlide, 5000); // Change d'image toutes les 5 secondes
+
+    return () => clearInterval(intervalId); // Nettoyage du setInterval lors de la suppression du composant
+  }, [currentIndex]);
+
+  
 
   useEffect(() => {
     const selectedLogement = logementsData.find((item) => item.id === id);
@@ -15,16 +36,23 @@ function Logement() {
   }, [id]);
 
   if (!logement) {
-    return <div>Chargement...</div>;
+    return <Erreur />;
   }
+  
 
   return (
     <div className='logement-container'>
       <div className='pictures'>
-        {logement.pictures.map((picture, index) => (
-          <img src={picture} alt={logement.title} key={index} />
-        ))}
-      </div>
+          <Slideshow 
+            image={logement.pictures[currentIndex]} 
+            title={logement.title}  
+            numberTotal={logement.pictures.length} 
+            left={preSlide}
+            right={nexSlide}
+            currentIndex = {currentIndex + 1}
+            
+          />
+      </div> 
 
       <div className='logement-content'>
         <div className='title-tags'>
