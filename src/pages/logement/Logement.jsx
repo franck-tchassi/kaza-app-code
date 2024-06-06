@@ -6,6 +6,7 @@ import Rating from '@rating/Rating';
 import '@logement/logement.scss';
 import Erreur from '@erreur/Erreur';
 import Slideshow from '../../components/slideshow/Slideshow';
+import Tags from '../../components/tags/Tags';
 
 function Logement() {
   const { id } = useParams();
@@ -60,11 +61,7 @@ function Logement() {
             <h1 className='title'>{logement.title}</h1>
             <p className='location'>{logement.location}</p>
           </div>
-          <div className='tags'>
-            {logement.tags.map((tag, index) => (
-              <span key={index} className='tag'>{tag}</span>
-            ))}
-          </div>
+          <Tags tags={logement.tags}/>
         </div>
 
         <div className='host-rating'>
@@ -80,7 +77,8 @@ function Logement() {
 
       <div className='description-equipment'>
         <Collapse title='Description' description={logement.description} />
-        <Collapse title='Équipements' description={logement.equipments.join(', ')} />
+
+        <Collapse title='Équipements'  equipement={logement.equipments} />
       </div>
     </div>
   );
