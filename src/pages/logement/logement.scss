@@ -34,25 +34,7 @@
                     }
                 }
             }
-            .tags{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 115px;
-                height: 25px;
-                border-radius: 10px;
-                background-color: #FF6060;
-                position: relative;
-                top: -28px;
-                p{
-                    color: white;
-                    font:{
-                        family: 'Montserrat';
-                        size:14px ;
-                        weight: 700;
-                    }
-                }
-            }
+
 
         }
         .host-rating{

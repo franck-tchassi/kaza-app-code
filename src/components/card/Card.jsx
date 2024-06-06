@@ -1,6 +1,6 @@
 import React from 'react'
 import '@card/card.scss'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logement from '../../data/logements.json'
 
 
@@ -10,19 +10,19 @@ const Card = () => {
 
   return (
     <div className='card-container'>
-        {location.pathname==='/' &&
+        {location.pathname==='/'&&
           
-          logement.map((logement)=>{
+          (logement.map((logement)=>(
             //console.log(logement.id)
-            return(
-            <div className='card' key={logement.id}>
-              
+            
+            <Link to={`/logement/${logement.id}`} className='card' key={logement.id}>
+
                 <img src={logement.cover} alt={logement.title} />
                 <h2>{logement.title}</h2>
                 
-            </div>
-            )
-          })
+            </Link>
+            
+          )))
 
         }
     </div>

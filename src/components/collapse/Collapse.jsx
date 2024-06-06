@@ -25,13 +25,16 @@ const Collapse = (props) => {
               </div>
           }
       </div>
-      {isOpen? 
+      {isOpen && (
           <div className='collapse-description'>
-            <p>{props.description}</p>
+              <p>{props.description}</p>
           </div>
-          :
-          ""
-      }
+      )}
+      {isOpen && ( 
+          <div className='collapse-equipment'>
+              <p>{props.equipement}</p>
+          </div>
+      )}
       
     </div>
     

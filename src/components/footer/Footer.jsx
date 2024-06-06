@@ -1,9 +1,12 @@
 import React from 'react'
+import '@footer/footer.scss'
+import kasa from '@images/kosa-blanc.png'
 
 const Footer = () => {
   return (
-    <div>
-      
+    <div className='footer-container'>
+      <img src={kasa}  alt='image de kasa' />
+      <p>&copy;2020 Kasa. All rights reserved</p>
     </div>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import Card from '@card/Card'
 
 const Accueil = () => {
   return (
-    <div>
-      
+    <div className='accueil-container'>
+      <Card />
     </div>
   )
 }

@@ -56,6 +56,10 @@ export default defineConfig({
         find: '@logement',
         replacement: path.resolve(__dirname, 'src/pages/logement')
       },
+      {
+        find: '@rating',
+        replacement: path.resolve(__dirname, 'src/components/rating')
+      },
     ]
   }
 })
