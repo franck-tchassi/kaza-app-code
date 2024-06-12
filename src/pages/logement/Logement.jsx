@@ -23,11 +23,6 @@ function Logement() {
     const newSlide = isLastSlide? 0 : currentIndex + 1 
     setCurrentIndex(newSlide)
   }
-  useEffect(() => {
-    const intervalId = setInterval(nexSlide, 5000); // Change d'image toutes les 5 secondes
-
-    return () => clearInterval(intervalId); // Nettoyage du setInterval lors de la suppression du composant
-  }, [currentIndex]);
 
   
 

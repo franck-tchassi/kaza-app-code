@@ -12,7 +12,7 @@ const Banner = () => {
       {location.pathname==='/'? 
           <div className='mer'>
               <img src={mer} alt='image de la mer'/>
-              <p>Chez vous, <span>partout et ailleurs</span></p>
+              <p>Chez vous, partout et ailleurs</p>
           </div> 
           : 
           " "

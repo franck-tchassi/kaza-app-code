@@ -9,13 +9,14 @@ const Slideshow = (props) => {
          <img src={props.image} alt={props.title} />
 
         
-          
-          <div className='slider-left'>
-                {props.numberTotal > 1 && <BiChevronLeft  size={80} onClick={props.left}/> }
-          </div>
-          
-          <div className='slider-right'>
-                {props.numberTotal > 1 && <BiChevronRight size={80} onClick={props.right}/> }
+          <div className='chevrons'>
+              <div className='slider-left'>
+                    {props.numberTotal > 1 && <BiChevronLeft className='chevron-icon'  onClick={props.left}/> }
+              </div>
+              
+              <div className='slider-right'>
+                    {props.numberTotal > 1 && <BiChevronRight className='chevron-icon' onClick={props.right}/> }
+              </div>
           </div>
           
 
