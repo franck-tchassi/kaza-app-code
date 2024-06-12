@@ -24,12 +24,13 @@
             align-items: center;
             gap: 5px;
             position: relative;
-            top: -170px;
+            padding: 15px;
+            top: -95%;
             color: white;
             font:{
               family: 'Montserrat';
               weight: 700;
-              size: 30px;
+              size: 48px;
             }
             
         }
@@ -37,9 +38,10 @@
     
 }
 
-//sur mobile max-width: 448px
-@media all and (max-width: 448px){
+//max-width: 595px
+@media all and (max-width: 595px){
     .banner{
+        margin-top: -15px;
         .mer, .montagne{
             height: 140px;
             img{
@@ -49,17 +51,14 @@
             p{
                 flex-direction: column;
                 align-items:start;
-                top: -145px;
-                left: 15px;
+                top: -100%;
+                left: 4%;
                 font:{
                   family: 'Montserrat';
                   weight: 700;
-                  size: 30px;
+                  size: 24px;
                 }
-                span{
-                    position: relative;
-                    top: -22px;
-                }
+               
                 
             }
            

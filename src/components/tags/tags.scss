@@ -23,3 +23,24 @@
         }
     }
 }
+
+
+
+//max-width: 595px
+@media all and (max-width:595px){
+    .tags-container{
+        .tags{
+            
+            width: 84px;
+            height: 18px;
+            top: -28px;
+            padding: 10px;
+            p{
+                color: white;
+                font:{
+                    size:10px ;
+                }
+            }
+        }
+    }
+}

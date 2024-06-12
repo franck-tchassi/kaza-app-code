@@ -3,6 +3,14 @@
     color: #FF6060;
 }
 .star{
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
+}
+
+//max-width: 595px
+@media all and (max-width:595px){
+    .star{
+        width: 18px;
+        height: 18px;
+    }
 }

@@ -7,7 +7,7 @@
     margin-top: 22px;
     border-radius: 25px;
     background-color: #F6F6F6;
-    
+    margin-block: 35px;
 
     .card{
         height: 340px;
@@ -21,8 +21,9 @@
         h2{
             color: white;
             position: relative;
-            top: -98px;
-            left: 15px;
+            top: -25%;
+            left: 5%;
+            padding: 0 12px;
             font:{
                 family: 'Montserrat';
                 weight: 700;
@@ -40,19 +41,13 @@
 
         .card{
             height: 320px;
-            h2{
-                color: white;
-                position: relative;
-                top: -98px;
-                left: 15px;
         
-            }
         }
     }
 }
 
-//sur mobile avec max-width: 448px
-@media all and (max-width:448px){
+//sur mobile avec max-width: 595px
+@media all and (max-width:595px){
     .card-container{
         display: flex;
         flex-direction: column;
@@ -63,12 +58,11 @@
     
         .card{
             height: 240px;
+
             h2{
-                color: white;
-                position: relative;
-                top: -92px;
-                left: 15px;
-               
+                
+                top: -35%;
+                left: 5%;
             }
         }
     }

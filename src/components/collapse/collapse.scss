@@ -5,7 +5,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 45px;
+        height: 52px;
         border-radius: 5px;
         background-color: #FF6060;
         padding: 0 10px 0 10px;
@@ -13,13 +13,13 @@
             color: white;
             font:{
                 family: 'Montserrat';
-                size: 24px;
+                size: 18px;
                 weight: 700;
             }
         }
         .icon{
             color: white;
-            font-size: 25px;
+            font-size: 35px;
             cursor: pointer;
         }
     }
@@ -31,7 +31,7 @@
             font:{
                 family: 'Montserrat';
                 size: 18px;
-                weight: 200;
+                weight: 400;
             }
         }
         
@@ -39,17 +39,21 @@
 }
 
 
-//sur mobile max-width: 548px
-@media all and (max-width: 548px){
-    .collapse{
-        height: 25px;
-        h2{
-            font:{
-                size: 13px;
+
+//max-width: 595px
+@media all and (max-width: 595px){
+    .collapse-container{
+        .collapse{
+           height: 40px;
+            h2{
+                font:{
+                    size: 13px;
+                }
+            }
+            .icon{
+                font-size: 25px;
             }
         }
-        .icon{
-            font-size: 15px;
-        }
     }
+    
 }

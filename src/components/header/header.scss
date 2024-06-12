@@ -2,7 +2,7 @@
 @mixin text{
     font:{
         family: 'Montserrat';
-        size: 1.2rem;
+        size: 24px;
         weight: 5 * 100;
     }
 }
@@ -12,11 +12,12 @@
     display: flex;
     align-items: center;
     justify-content:space-between;
+    margin-top: 25px;
     padding: 10px 8%;
     .logo{
         img{
-            width: 130px;
-            height: 35px;
+            width: 210px;
+            height: 69px;
         }
     }
 
@@ -38,13 +39,20 @@
     }
 }
 
-//sur mobile max-width: 480px
-@media all and (max-width: 480px) {
+// max-width: 612px
+@media all and (max-width: 612px) {
     .header{
         padding: 20px;
+        .logo{
+            img{
+                width: 145px;
+                height: 46px;
+            }
+        }
         .navbar{
             ul{
                 li{
+                    font-size: 12px;
                     margin-left: 20px;
                 }
             }
@@ -60,12 +68,6 @@
                 height: 25px;
             }
         }
-        .navbar{
-            ul{
-                li{
-                    font-size: 1rem;
-                }
-            }
-        }
+        
     }
 }
