@@ -7,24 +7,27 @@
     
     span{
         color: #FF6060;
+        line-height: 411px;
         font:{
             family: 'Montserrat';
             weight: 700;
-            size: 128px;
+            size: 288px;
         }
     }
     .not-exist{
         color: #FF6060;
+        line-height: 51px;
         font:{
             family: 'Montserrat';
             weight: 500;
-            size: 26px;
+            size: 36px;
         }
     }
     .redirection a{
         text-decoration: underline;
         color: black;
         margin-bottom: 71px;
+        line-height: 25px;
         font:{
             family: 'Montserrat';
             weight: 500;
