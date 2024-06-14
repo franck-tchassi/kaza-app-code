@@ -26,14 +26,27 @@ const Collapse = (props) => {
           }
       </div>
       {isOpen && (
-          <div className='collapse-description'>
-              <p>{props.description}</p>
-          </div>
-      )}
-      {isOpen && ( 
-          <div className='collapse-equipment'>
-              <p>{props.equipement}</p>
-          </div>
+        <>
+          {props.content_apropos && (
+            <div className='collapse_apropos'>
+              <p>{props.content_apropos}</p>
+            </div>
+          )}
+          {props.content && (
+            <div className='description_logements'>
+              <p>{props.content}</p>
+            </div>
+          )}
+          {props.equipement && (
+            <div className='collapse-equipment'>
+              <ul>
+                {props.equipement.map((value, index) => (
+                  <li key={index}>{value}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </>
       )}
       
     </div>

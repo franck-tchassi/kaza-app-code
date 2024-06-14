@@ -23,7 +23,7 @@
             cursor: pointer;
         }
     }
-    .collapse-description, .collapse-equipment{
+    .collapse_apropos, .description_logements{
         
         background-color: #F6F6F6;
         padding: 0px 15px ;
@@ -35,6 +35,21 @@
             }
         }
         
+    }
+    .collapse-equipment{
+        background-color: #F6F6F6;
+        ul{
+            list-style: none;
+            padding: 0px 15px;
+            li{
+                
+                font:{
+                    family: 'Montserrat';
+                    size: 18px;
+                    weight: 400;
+                }
+            }
+        }
     }
 }
 
