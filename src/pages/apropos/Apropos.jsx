@@ -8,10 +8,10 @@ const Apropos = () => {
     
     <div className='apropos'>
           <div className='apropos-collapse'>
-              <Collapse title="Fiabilité" description={fiabilité} />
-              <Collapse title="Respect" description={respect}/>
-              <Collapse title="Service" description={service}/>
-              <Collapse title="Sécurité" description={securite}/>
+              <Collapse title="Fiabilité" content_apropos={fiabilité} />
+              <Collapse title="Respect" content_apropos={respect}/>
+              <Collapse title="Service" content_apropos={service}/>
+              <Collapse title="Sécurité" content_apropos={securite}/>
           </div>
     </div>
   )
